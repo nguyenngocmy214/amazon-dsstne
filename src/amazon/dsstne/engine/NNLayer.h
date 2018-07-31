@@ -194,7 +194,16 @@ public:
 
     ~NNLayer();
 
+    /**
+     * Returns the name of this layer.
+     */
     const string& GetName() const;
+
+    /**
+     * Returns the name of the dataset that this layer expects.
+     * Used to match the layer with the dataset in NNNetwork#LoadDataSets()
+     */
+    const string& GetDataSetName() const;
 
     NNLayer::Kind GetKind() const;
 
